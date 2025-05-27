@@ -56,6 +56,25 @@ c. Caption
 
 This figure shows the relationship between background noise level and focus duration (in hours). Individual observations are jittered, while bars represent the average focus time for each noise category. The data suggest that quieter environments may support longer periods of focused work.
 
+d. Table Representation 
+
+```{r}
+
+summary_table <- clean_data |> 
+  group_by(background_noise) |> 
+  summarise(mean_focus = round(mean(focus_duration_hrs),1)) |> 
+  gt() |>
+  tab_header(
+    title = "Mean Focus Duration by Background Noise Level"
+  ) |>
+  cols_label(
+    background_noise = "Background Noise Level",
+    mean_focus = "Mean Focus Duration (hrs)"
+  )
+
+summary_table 
+```
+
 
 
 
