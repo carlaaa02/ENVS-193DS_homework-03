@@ -52,5 +52,10 @@ ggplot(data, aes(x = background_noise, y = focus_duration_hrs, fill = background
   theme_minimal(base_size = 14)
 ```
 
+c. Caption 
+
+This figure shows the relationship between background noise level and focus duration (in hours). Individual observations are jittered, while bars represent the average focus time for each noise category. The data suggest that quieter environments may support longer periods of focused work.
+
+
 
 
