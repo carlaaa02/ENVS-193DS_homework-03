@@ -32,24 +32,27 @@ a. I could calculate the mean focus duration to compare how long I stayed focuse
 b. Visualization
 
 ```{r}
+# clean and organize dataset (just in case)
 clean_data <- data |> 
   clean_names() |> 
    mutate(
-    background_noise = str_trim(background_noise),
+    background_noise = str_trim(background_noise),  #removing whitespace from background noise column
     background_noise = factor(background_noise, levels = c("quite", "semi-loud", "loud"))
-  )
+  )  # treating background noise as factor with specific order 
 
-ggplot(data, aes(x = background_noise, y = focus_duration_hrs, fill = background_noise)) +
-  geom_jitter(width = 0.2, color = "black", size = 2, alpha = 0.7) +
-  stat_summary(fun = mean, geom = "bar", width = 0.5, alpha = 0.6, color = "black") +
-  scale_fill_manual(values = c("quite" = "#1f78b4", "semi-loud" = "#33a02c", "loud" = "#e31a1c")) +
+# plotting focus duration by background noise 
+ggplot(data, aes(x = background_noise, y = focus_duration_hrs,fill = background_noise)) +
+  geom_jitter(width = 0.2, color = "black", size = 2, alpha = 0.7) + # adding individual data points with jitter and customizing size, color, and spread
+  stat_summary(fun = mean, geom = "bar", width = 0.5, alpha = 0.6, color = "black") + # adding mean bars of focus duration for each background noise level and customizing color, size. 
+  scale_fill_manual(values = c("quite" = "#1f78b4", "semi-loud" = "#33a02c", "loud" = "#e31a1c")) + # manually coloring each bar for background noise level 
   labs(
-    title = "Average Focus Duration by Background Noise",
-    x = "Background Noise Level",
-    y = "Focus Duration (hours)",
-    fill = "Noise Level"
+    title = "Average Focus Duration by Background Noise", # tittle label 
+    x = "Background Noise Level", # x-axis label 
+    y = "Focus Duration (hours)", # y-axis label 
+    fill = "Noise Level"    # legend title
   ) +
-  theme_minimal(base_size = 14)
+  theme_minimal(base_size = 14) #minimalist theme with large base font size
+
 ```
 
 c. Caption 
@@ -59,19 +62,20 @@ This figure shows the relationship between background noise level and focus dura
 d. Table Representation 
 
 ```{r}
-
+# creating summary table object
 summary_table <- clean_data |> 
-  group_by(background_noise) |> 
-  summarise(mean_focus = round(mean(focus_duration_hrs),1)) |> 
-  gt() |>
+  group_by(background_noise) |> # grouping by background noise 
+  summarise(mean_focus = round(mean(focus_duration_hrs),1)) |>  #calculating mean focus duration and round to 1 decimal
+  gt() |>   #coverting summary table data into gt table 
   tab_header(
-    title = "Mean Focus Duration by Background Noise Level"
+    title = "Mean Focus Duration by Background Noise Level" # adding table header 
   ) |>
-  cols_label(
-    background_noise = "Background Noise Level",
+  cols_label(        # labeling columns 
+    background_noise = "Background Noise Level", 
     mean_focus = "Mean Focus Duration (hrs)"
   )
 
+# display table
 summary_table 
 ```
 
