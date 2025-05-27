@@ -1,5 +1,33 @@
 ---
-title: "hw3"
+title: "Homework 03"
+Author: "Carla Quintanilla"
+Date: "05-22-25"
 format: html
 ---
+
+[Github Repositopry] https://github.com/carlaaa02/ENVS-193DS_homework-03
+
+## Set up
+
+```{r}
+#| message: false
+
+#Loading Packages 
+library(tidyverse)
+library(here)
+library(gt)
+library(flextable)
+library(janitor)
+library(readxl)
+
+#Read in data 
+data <- read_csv(here("data","my_data.csv"))
+
+```
+
+## Problem 1 
+
+a. I could calculate the mean focus duration to compare how long I stayed focused between different background noise levels (e.g., quiet, semi-loud, loud), because I suspect that noise distractions in the library or living room affect my ability to concentrate. This comparison would help me understand whether quieter environments are actually leading to longer periods of focus.
+
+
 
