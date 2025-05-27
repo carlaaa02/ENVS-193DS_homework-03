@@ -66,7 +66,7 @@ d. Table Representation
 summary_table <- clean_data |> 
   group_by(background_noise) |> # grouping by background noise 
   summarise(mean_focus = round(mean(focus_duration_hrs),1)) |>  #calculating mean focus duration and round to 1 decimal
-  gt() |>   #coverting summary table data into gt table 
+  gt() |>   #converting summary table data into gt table 
   tab_header(
     title = "Mean Focus Duration by Background Noise Level" # adding table header 
   ) |>
@@ -78,7 +78,5 @@ summary_table <- clean_data |>
 # display table
 summary_table 
 ```
-
-
 
 
