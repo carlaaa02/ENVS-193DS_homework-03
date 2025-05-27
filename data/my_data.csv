@@ -1,0 +1,20 @@
+﻿date,caffeine_mg,focus_duration_hrs,sleep_hrs,time_of_day,location,background_noise ,attended_work
+4/16/25,150,1,7,nigth ,bedroom,quite,yes
+4/17/25,150,4.5,8,afternoon,library,quite,no
+4/18/25,100,2,7.5,nigth ,bedroom,quite,yes
+4/21/25,0,2,7.5,morning,library,semi-loud,yes
+4/22/25,150,2,7,morning,library,semi-loud,yes
+4/23/25,200,5,7,morning,library,quite,no
+4/24/25,150,3,8,morning ,library,quite,yes
+2/28/25,150,3,7,morning,library,quite,yes
+4/29/25,150,5.5,8,afternoon,library,semi-loud,no
+5/1/25,0,2,7.5,afternoon,library,loud,yes
+5/5/25,150,3,7,morning,library,quite,yes
+5/6/25,150,4,8,afternoon,library,semi-loud,no
+5/8/25,0,2,7,afternoon,library,loud,yes
+5/13/25,150,3,7.5,morning,library,quite,yes
+5/15/25,150,4,8,afternoon,library,quite,no
+5/19/25,150,3,7.5,morning,library,quite,yes
+5/20/25,150,5,8,afternoon,library,quite,no
+5/22/25,150,4,7.5,afternoon,library,quite,no
+5/23/25,0,3,8,morning,livingroom,semi-loud,yes
