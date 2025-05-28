@@ -5,7 +5,7 @@ Date: "05-22-25"
 format: html
 ---
 
-[Github Repositopry] https://github.com/carlaaa02/ENVS-193DS_homework-03
+\[Github Repositopry\] https://github.com/carlaaa02/ENVS-193DS_homework-03
 
 ## Set up
 
@@ -25,11 +25,11 @@ data <- read_csv(here("data","my_data.csv"))
 
 ```
 
-## Problem 1 
+## Problem 1
 
-a. I could calculate the mean focus duration to compare how long I stayed focused between different background noise levels (e.g., quiet, semi-loud, loud), because I suspect that noise distractions in the library or living room affect my ability to concentrate. This comparison would help me understand whether quieter environments are actually leading to longer periods of focus.
+a.  I could calculate the mean focus duration to compare how long I stayed focused between different background noise levels (e.g., quiet, semi-loud, loud), because I suspect that noise distractions in the library or living room affect my ability to concentrate. This comparison would help me understand whether quieter environments are actually leading to longer periods of focus.
 
-b. Visualization
+b.  Visualization
 
 ```{r}
 # clean and organize dataset (just in case)
@@ -55,11 +55,11 @@ ggplot(data, aes(x = background_noise, y = focus_duration_hrs,fill = background_
 
 ```
 
-c. Caption 
+c.  Caption
 
 This figure shows the relationship between background noise level and focus duration (in hours). Individual observations are jittered, while bars represent the average focus time for each noise category. The data suggest that quieter environments may support longer periods of focused work.
 
-d. Table Representation 
+d.  Table Representation
 
 ```{r}
 # creating summary table object
@@ -78,5 +78,18 @@ summary_table <- clean_data |>
 # display table
 summary_table 
 ```
+
+
+## Problem 2 
+
+a. Effective visualization 
+
+An affective visualization of my data could explore how my focus duration changes on days I attended work versus days I didn’t. I might use tall, structured rectangles to represent “work days,” with muted or darker colors to reflect the mental effort and rigidity of scheduled responsibilities. In contrast, “non-work days” could be shown with lighter, softer-colored flowing shapes or curves, representing a more relaxed, open-ended focus. The height or area of each shape would reflect my recorded focus duration, allowing viewers to feel the contrast between how structured time versus free time affects my ability to concentrate. This visualization would highlight the emotional difference between obligation-driven and self-directed focus in my daily life.
+
+b. Create a sketch 
+
+
+
+
 
 
