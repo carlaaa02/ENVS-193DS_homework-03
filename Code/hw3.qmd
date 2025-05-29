@@ -120,3 +120,8 @@ c. Aesthetic clarity
 
 The authors handled visual clutter well by using a clean and simple bar graph layout with minimal text and clearly labeled axes. The data:ink ratio is high, most of the visual elements directly represent data (bars and error bars, asterisks), with very little extraneous decoration or unnecessary labeling. This makes the figure easy to interpret and visually efficient.
 
+d. Recommendations 
+
+My recommendations for this figure is to add individual data points to add transparency to the figure. Both bars are gray, I believe color contrast would add more clarity to the figure and in understanding data. Another thing that can improve the clarity when comparing the significance on each site is adding the is placing the asterisks directly into each bar instead of having it at the top with text (e.g Restoration**)
+
+
