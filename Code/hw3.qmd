@@ -5,7 +5,8 @@ Date: "05-22-25"
 format: html
 ---
 
-\[Github Repositopry\] https://github.com/carlaaa02/ENVS-193DS_homework-03
+\[Github Repositopry\] 
+https://github.com/carlaaa02/ENVS-193DS_homework-03.git
 
 ## Set up
 
