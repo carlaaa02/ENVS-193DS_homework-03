@@ -112,3 +112,7 @@ a. The authors are addressing whether wetland restoration effectively enhances e
 
 ![statistical critique](/Users/carlaquintanilla/Desktop/Screenshot 2025-05-28 at 1.04.01 PM.png)
 
+b. Visual clarity 
+
+I believe the authors clearly represented their statistics in the figure, the x- and y-axes are logically positioned and labeled, and the bar graphs show means with standard error bars. They include summary statistics for each variable (Soil Organic Carbon, Olsen P, Saturated Hydraulic Conductivity, and Native Plant Species Richness), along with significance indicators from models shown by asterisks that are defined in figure description. 
+
