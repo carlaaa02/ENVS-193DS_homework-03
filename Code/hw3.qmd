@@ -110,4 +110,5 @@ I analyzed my data to group focus time by noise level, then translated that into
 
 a. The authors are addressing whether wetland restoration effectively enhances ecosystem services and biodiversity. They used paired t-test to compare native plant species richness between restored and unrestored wetlands and linear mixed-effects models for soil variables, Olsen P, and saturated hydraulic conductivity (Ks), incorporating fixed effects like restoration status and distance from water’s edge, and random effects such as site identity and plot nested within site. 
 
+![statistical critique](/Users/carlaquintanilla/Desktop/Screenshot 2025-05-28 at 1.04.01 PM.png)
 
