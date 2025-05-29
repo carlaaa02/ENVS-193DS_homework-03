@@ -107,9 +107,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">#Read in data </span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>,<span class="st">"my_data.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggtext)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggimage)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Read in data </span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>,<span class="st">"my_data.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="problem-1" class="level2">
@@ -120,7 +122,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># clean and organize dataset (just in case)</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>clean_data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>clean_data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>() <span class="sc">|&gt;</span> </span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>   <span class="fu">mutate</span>(</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">background_noise =</span> <span class="fu">str_trim</span>(background_noise),  <span class="co">#removing whitespace from background noise column</span></span>
@@ -171,23 +173,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># display table</span></span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>summary_table </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="wdztpodigx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#wdztpodigx table {
+<div id="iojtrvfrfd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#iojtrvfrfd table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#wdztpodigx thead, #wdztpodigx tbody, #wdztpodigx tfoot, #wdztpodigx tr, #wdztpodigx td, #wdztpodigx th {
+#iojtrvfrfd thead, #iojtrvfrfd tbody, #iojtrvfrfd tfoot, #iojtrvfrfd tr, #iojtrvfrfd td, #iojtrvfrfd th {
   border-style: none;
 }
 
-#wdztpodigx p {
+#iojtrvfrfd p {
   margin: 0;
   padding: 0;
 }
 
-#wdztpodigx .gt_table {
+#iojtrvfrfd .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -213,12 +215,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#wdztpodigx .gt_caption {
+#iojtrvfrfd .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#wdztpodigx .gt_title {
+#iojtrvfrfd .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -230,7 +232,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#wdztpodigx .gt_subtitle {
+#iojtrvfrfd .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -242,7 +244,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#wdztpodigx .gt_heading {
+#iojtrvfrfd .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -254,13 +256,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#wdztpodigx .gt_bottom_border {
+#iojtrvfrfd .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wdztpodigx .gt_col_headings {
+#iojtrvfrfd .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -275,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#wdztpodigx .gt_col_heading {
+#iojtrvfrfd .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -295,7 +297,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#wdztpodigx .gt_column_spanner_outer {
+#iojtrvfrfd .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -307,15 +309,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#wdztpodigx .gt_column_spanner_outer:first-child {
+#iojtrvfrfd .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wdztpodigx .gt_column_spanner_outer:last-child {
+#iojtrvfrfd .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wdztpodigx .gt_column_spanner {
+#iojtrvfrfd .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -327,11 +329,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#wdztpodigx .gt_spanner_row {
+#iojtrvfrfd .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#wdztpodigx .gt_group_heading {
+#iojtrvfrfd .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -357,7 +359,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#wdztpodigx .gt_empty_group_heading {
+#iojtrvfrfd .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -372,15 +374,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#wdztpodigx .gt_from_md > :first-child {
+#iojtrvfrfd .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wdztpodigx .gt_from_md > :last-child {
+#iojtrvfrfd .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wdztpodigx .gt_row {
+#iojtrvfrfd .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -399,7 +401,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#wdztpodigx .gt_stub {
+#iojtrvfrfd .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -412,7 +414,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wdztpodigx .gt_stub_row_group {
+#iojtrvfrfd .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -426,15 +428,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#wdztpodigx .gt_row_group_first td {
+#iojtrvfrfd .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wdztpodigx .gt_row_group_first th {
+#iojtrvfrfd .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#wdztpodigx .gt_summary_row {
+#iojtrvfrfd .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -444,16 +446,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wdztpodigx .gt_first_summary_row {
+#iojtrvfrfd .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#wdztpodigx .gt_first_summary_row.thick {
+#iojtrvfrfd .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wdztpodigx .gt_last_summary_row {
+#iojtrvfrfd .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -463,7 +465,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#wdztpodigx .gt_grand_summary_row {
+#iojtrvfrfd .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -473,7 +475,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wdztpodigx .gt_first_grand_summary_row {
+#iojtrvfrfd .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -483,7 +485,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#wdztpodigx .gt_last_grand_summary_row_top {
+#iojtrvfrfd .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -493,11 +495,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#wdztpodigx .gt_striped {
+#iojtrvfrfd .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wdztpodigx .gt_table_body {
+#iojtrvfrfd .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -506,7 +508,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#wdztpodigx .gt_footnotes {
+#iojtrvfrfd .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -520,7 +522,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#wdztpodigx .gt_footnote {
+#iojtrvfrfd .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -529,7 +531,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wdztpodigx .gt_sourcenotes {
+#iojtrvfrfd .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -543,7 +545,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#wdztpodigx .gt_sourcenote {
+#iojtrvfrfd .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -551,72 +553,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wdztpodigx .gt_left {
+#iojtrvfrfd .gt_left {
   text-align: left;
 }
 
-#wdztpodigx .gt_center {
+#iojtrvfrfd .gt_center {
   text-align: center;
 }
 
-#wdztpodigx .gt_right {
+#iojtrvfrfd .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wdztpodigx .gt_font_normal {
+#iojtrvfrfd .gt_font_normal {
   font-weight: normal;
 }
 
-#wdztpodigx .gt_font_bold {
+#iojtrvfrfd .gt_font_bold {
   font-weight: bold;
 }
 
-#wdztpodigx .gt_font_italic {
+#iojtrvfrfd .gt_font_italic {
   font-style: italic;
 }
 
-#wdztpodigx .gt_super {
+#iojtrvfrfd .gt_super {
   font-size: 65%;
 }
 
-#wdztpodigx .gt_footnote_marks {
+#iojtrvfrfd .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#wdztpodigx .gt_asterisk {
+#iojtrvfrfd .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wdztpodigx .gt_indent_1 {
+#iojtrvfrfd .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wdztpodigx .gt_indent_2 {
+#iojtrvfrfd .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wdztpodigx .gt_indent_3 {
+#iojtrvfrfd .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wdztpodigx .gt_indent_4 {
+#iojtrvfrfd .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wdztpodigx .gt_indent_5 {
+#iojtrvfrfd .gt_indent_5 {
   text-indent: 25px;
 }
 
-#wdztpodigx .katex-display {
+#iojtrvfrfd .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#wdztpodigx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#iojtrvfrfd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -650,6 +652,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+</section>
+<section id="problem-2" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
+<ol type="a">
+<li>Effective visualization</li>
+</ol>
+<p>An affective visualization of my data could explore how my focus duration changes on days I attended work versus days I didn’t. I might use tall, structured rectangles to represent “work days,” with muted or darker colors to reflect the mental effort and rigidity of scheduled responsibilities. In contrast, “non-work days” could be shown with lighter, softer-colored flowing shapes or curves, representing a more relaxed, open-ended focus. The height or area of each shape would reflect my recorded focus duration, allowing viewers to feel the contrast between how structured time versus free time affects my ability to concentrate. This visualization would highlight the emotional difference between obligation-driven and self-directed focus in my daily life.</p>
+<ol start="2" type="a">
+<li>Create a sketch</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Users/carlaquintanilla/Downloads/IMG_0009.png" class="img-fluid figure-img"></p>
+<figcaption>Focus Time During Work days</figcaption>
+</figure>
+</div>
+<ol start="3" type="a">
+<li>Make a draft</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Users/carlaquintanilla/Downloads/IMG_0012.png" class="img-fluid figure-img"></p>
+<figcaption>Draft</figcaption>
+</figure>
+</div>
+<ol start="4" type="a">
+<li>Artist statement</li>
+</ol>
+<p>My piece shows how focus time varies with background noise, using a tree with three branches — one for each noise level — where branch height reflects average focus time and birds represent individual data points.</p>
+<p>I was inspired by affective data visualizations and nature-themed aesthetics that combine emotion with information which fitted well into my data type.</p>
+<p>This is a hand-drawn piece created with just pencil on paper.</p>
+<p>I analyzed my data to group focus time by noise level, then translated that into a symbolic tree where height and bird count visually represent the data.</p>
+</section>
+<section id="problem-3" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
+<ol type="a">
+<li>The authors are addressing whether wetland restoration effectively enhances ecosystem services and biodiversity. They used paired t-test to compare native plant species richness between restored and unrestored wetlands and linear mixed-effects models for soil variables, Olsen P, and saturated hydraulic conductivity (Ks), incorporating fixed effects like restoration status and distance from water’s edge, and random effects such as site identity and plot nested within site.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Users/carlaquintanilla/Desktop/Screenshot%202025-05-28%20at%201.04.01%20PM.png" class="img-fluid figure-img"></p>
+<figcaption>statistical critique</figcaption>
+</figure>
+</div>
+<ol start="2" type="a">
+<li>Visual clarity</li>
+</ol>
+<p>I believe the authors clearly represented their statistics in the figure, the x- and y-axes are logically positioned and labeled, and the bar graphs show means with standard error bars. They include summary statistics for each variable (Soil Organic Carbon, Olsen P, Saturated Hydraulic Conductivity, and Native Plant Species Richness), along with significance indicators from models shown by asterisks that are defined in figure description.</p>
+<ol start="3" type="a">
+<li>Aesthetic clarity</li>
+</ol>
+<p>The authors handled visual clutter well by using a clean and simple bar graph layout with minimal text and clearly labeled axes. The data:ink ratio is high, most of the visual elements directly represent data (bars and error bars, asterisks), with very little extraneous decoration or unnecessary labeling. This makes the figure easy to interpret and visually efficient.</p>
+<ol start="4" type="a">
+<li>Recommendations</li>
+</ol>
+<p>My recommendations for this figure is to add individual data points to add transparency to the figure. Both bars are gray, I believe color contrast would add more clarity to the figure and in understanding data. Another thing that can improve the clarity when comparing the significance on each site is adding the is placing the asterisks directly into each bar instead of having it at the top with text (e.g Restoration**)</p>
 </section>
 
 </main>
