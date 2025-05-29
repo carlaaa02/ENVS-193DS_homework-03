@@ -105,3 +105,9 @@ I was inspired by affective data visualizations and nature-themed aesthetics tha
 This is a hand-drawn piece created with just pencil on paper. 
 
 I analyzed my data to group focus time by noise level, then translated that into a symbolic tree where height and bird count visually represent the data.
+
+## Problem 3 
+
+a. The authors are addressing whether wetland restoration effectively enhances ecosystem services and biodiversity. They used paired t-test to compare native plant species richness between restored and unrestored wetlands and linear mixed-effects models for soil variables, Olsen P, and saturated hydraulic conductivity (Ks), incorporating fixed effects like restoration status and distance from water’s edge, and random effects such as site identity and plot nested within site. 
+
+
