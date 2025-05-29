@@ -96,5 +96,12 @@ c. Make a draft
 
 ![Draft](/Users/carlaquintanilla/Downloads/IMG_0012.png)
 
-d. 
+d. Artist statement 
 
+My piece shows how focus time varies with background noise, using a tree with three branches — one for each noise level — where branch height reflects average focus time and birds represent individual data points.
+
+I was inspired by affective data visualizations and nature-themed aesthetics that combine emotion with information which fitted well into my data type. 
+
+This is a hand-drawn piece created with just pencil on paper. 
+
+I analyzed my data to group focus time by noise level, then translated that into a symbolic tree where height and bird count visually represent the data.
