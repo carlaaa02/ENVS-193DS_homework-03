@@ -90,11 +90,11 @@ An affective visualization of my data could explore how my focus duration change
 
 b. Create a sketch 
 
-![Focus Time During Work days](/Users/carlaquintanilla/Downloads/IMG_0009.png)
+![Focus Time During Work days](~/ENVS-193DS_homework-03/data/IMG_0009.png)
 
 c. Make a draft 
 
-![Draft](/Users/carlaquintanilla/Downloads/IMG_0012.png)
+![Draft](~/ENVS-193DS_homework-03/data/IMG_0012.png)
 
 d. Artist statement 
 
@@ -110,7 +110,7 @@ I analyzed my data to group focus time by noise level, then translated that into
 
 a. The authors are addressing whether wetland restoration effectively enhances ecosystem services and biodiversity. They used paired t-test to compare native plant species richness between restored and unrestored wetlands and linear mixed-effects models for soil variables, Olsen P, and saturated hydraulic conductivity (Ks), incorporating fixed effects like restoration status and distance from water’s edge, and random effects such as site identity and plot nested within site. 
 
-![statistical critique](/Users/carlaquintanilla/Desktop/Screenshot 2025-05-28 at 1.04.01 PM.png)
+![statistical critique](~/ENVS-193DS_homework-03/data/Screenshot 2025-05-28 at 1.04.01 PM.png)
 
 b. Visual clarity 
 
